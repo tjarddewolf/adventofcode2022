@@ -17,7 +17,7 @@ start_stack = get_starting_stack(lines[:8])
 move_stack = lines[10:]
 # print(move_stack)
 
-#
+# should have made this cleaner, but i'm updating the original lists rather than creating a new one so... It's messy
 # #step 1
 # def run_create():
 #     global i
