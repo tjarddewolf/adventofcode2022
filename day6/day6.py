@@ -18,8 +18,13 @@ with open('day6/day6.txt') as f:
 # #test data
 # data[:0] = 'mjqjpqmgbljsphdztnvjfqwrcgsmlb'
 # print(data)
-for i in range(13, len(data)):
-    compare_data = data[i-13:i+1]
-    if len(compare_data) == len(set(compare_data)):
-        print(i+1, compare_data)
+def compare_info(data, match_number):
+    for i in range(match_number-1, len(data)):
+        compare_data = data[i-match_number+1:i+1]
+        if len(compare_data) == len(set(compare_data)):
+            return(i+1, compare_data)
 
+p1 = compare_info(data, 4)
+p2 = compare_info(data, 14)
+
+print(p1, p2)
